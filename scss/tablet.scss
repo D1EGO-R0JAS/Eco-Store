@@ -1,0 +1,125 @@
+@use 'functions';
+
+header{
+    .header--nav{
+        min-height: 65px;
+    }
+    .impact{
+        &-img{
+            width: 50%;
+            max-width: 250px;
+        }
+    }
+}
+.healthCare{
+    h2{
+        text-align: center;
+    }
+    &-article{
+        width: 100%;
+        height: auto;
+        @include functions.flex-center(flex,row,center,center);
+        flex-wrap: wrap;
+    }
+}
+.decorationHouse{
+    h2{
+        text-align: center;
+    }
+    &-article{
+        @extend .healthCare-article;
+    }
+}
+@media (min-width:700px) {
+    header{
+        .impact{
+            @include functions.flex-center(flex,row,center,center);
+            padding: 0;
+            margin: 0;
+            gap: 10px;
+            max-height: 520px;
+            &-text{
+                width: 50%;
+                height: 60%;
+                h1{
+                    font-size: 2.7rem;
+                }
+                p{
+                    font-size: 1.8rem;
+                }
+                button{
+                    font-size: 1.6rem;
+                    width: 140px;
+                    height: 40px;
+                    border-radius: 10px;
+                }
+            }
+            &-img{
+                width: 50%;
+                height: 60%;
+            }
+        }
+    }
+    .healthCare{
+        h2{
+            font-size: 2.6rem;
+        }
+    }
+    .decorationHouse{
+        h2{
+            font-size: 2.6rem;
+        }
+    }
+    .aboutUs{
+        h2{
+            font-size: 2.6rem;
+            text-align: center
+        }
+        &-article{
+            @include functions.flex-center(flex,row,center,center);
+            flex-wrap: wrap;
+            margin-top: 40px;
+            .article-earth{
+                width: 50%;
+            }
+            .article-plant{
+                @extend .article-earth;
+            }
+        }
+    }
+    .gallery{
+        h2{
+            font-size: 2.6rem;
+            text-align: center;
+        }
+        &-article{
+            @include functions.flex-center(flex,row,center,center);
+            flex-wrap: wrap;
+        }
+    }
+    .findUs{
+        h2{
+            font-size: 2.6rem;
+            text-align: center;
+        }
+        h4{
+            font-size: 2rem;
+            text-align: center;
+        }
+        h5{
+            font-size: 1.8rem;
+            text-align: center;
+        }
+    }
+    footer{
+        .text{
+            .b-text{
+                li{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+}
+

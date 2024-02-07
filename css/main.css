@@ -1,0 +1,362 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #FFEFE7;
+}
+
+/*Seccion del header, barra de navegacion y informacion de impacto*/
+header {
+  width: 100%;
+  height: auto;
+}
+header .header--nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+header .header--nav a {
+  text-decoration: none;
+  color: #7C6A0A;
+}
+header .header--nav h4 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.8rem;
+}
+header .header--nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+header .impact {
+  width: 100%;
+  height: 80vh;
+  min-height: 450px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header .impact-text {
+  width: 100%;
+  height: 50%;
+}
+header .impact-text h1 {
+  font-size: 2.5rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #7C6A0A;
+  margin-bottom: 10px;
+}
+header .impact-text p {
+  font-size: 1.6rem;
+  color: #7C6A0A;
+  font-family: "IBM Plex Sans", sans-serif;
+  margin-bottom: 10px;
+}
+header .impact-text button {
+  background-color: #FA9500;
+  border-style: none;
+  display: inline-block;
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+}
+header .impact-img {
+  width: 65%;
+  height: 50%;
+}
+header .impact-img img {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 300px;
+  border-radius: 10%;
+}
+
+/*Seccion del Cuidado de la Salud*/
+.healthCare {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+.healthCare h2 {
+  font-size: 2.2rem;
+  color: #7C6A0A;
+  margin-bottom: 20px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.healthCare-article, .decorationHouse-article {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.healthCare-article .target, .decorationHouse-article .target, .decorationHouse-article .targetH {
+  width: 200px;
+  height: 320px;
+  border-radius: 10px;
+  background-color: #FFDAC6;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.healthCare-article .target-icon, .decorationHouse-article .target-icon, .decorationHouse-article .targetH-icon {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.healthCare-article .target figure, .decorationHouse-article .target figure, .decorationHouse-article .targetH figure {
+  width: 80%;
+  height: 70%;
+  margin-top: 5pxpx;
+}
+.healthCare-article .target figure img, .decorationHouse-article .target figure img, .decorationHouse-article .targetH figure img {
+  width: 100%;
+  height: 100%;
+}
+.healthCare-article .target h3, .decorationHouse-article .target h3, .decorationHouse-article .targetH h3 {
+  font-size: 1.6rem;
+  color: #7C6A0A;
+  margin: 10px 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+}
+.healthCare-article .target p, .decorationHouse-article .target p, .decorationHouse-article .targetH p {
+  font-size: 1.2rem;
+  color: #7C6A0A;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  padding: 5px;
+}
+
+/*Secion de Decoracion del Hogar, aqui se usa el extend para heredar los diseños de las cards del cuidado de la salud*/
+.decorationHouse {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin: 20px 0 0 0;
+}
+.decorationHouse h2 {
+  font-size: 2.2rem;
+  color: #7C6A0A;
+  margin-bottom: 20px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.decorationHouse-article .targetH {
+  background-color: #BABD8D;
+}
+.decorationHouse-article .targetH h3 {
+  color: white;
+}
+.decorationHouse-article .targetH p {
+  color: white;
+}
+
+/*Seccion del Nosotros*/
+.aboutUs {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  margin: 20px 0 0 0;
+}
+.aboutUs h2 {
+  color: #7C6A0A;
+  font-size: 2.2rem;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.aboutUs-article {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutUs-article .article-earth, .aboutUs-article .article-plant {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.aboutUs-article .article-earth figure, .aboutUs-article .article-plant figure {
+  width: 30%;
+  max-width: 90px;
+  height: auto;
+}
+.aboutUs-article .article-earth figure img, .aboutUs-article .article-plant figure img {
+  width: 100%;
+  height: 100%;
+}
+.aboutUs-article .article-earth p, .aboutUs-article .article-plant p {
+  width: 70%;
+  height: auto;
+  font-size: 1.6rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  color: #E86424;
+  padding: 5px;
+}
+/*La galeria de las tres fotos*/
+.gallery {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin: 20px 0 0 0;
+}
+.gallery h2 {
+  color: #7C6A0A;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.gallery-article {
+  width: 100%;
+  margin-top: 25px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.gallery-article figure {
+  width: 70%;
+  max-width: 240px;
+  height: auto;
+}
+.gallery-article figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/*Seccion de ubicacion y del mapa*/
+.findUs {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin: 20px 0px 50px 0;
+}
+.findUs h2 {
+  font-size: 2.2rem;
+  color: #7C6A0A;
+  margin-bottom: 20px;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.findUs .map {
+  width: 100%;
+  height: 50vh;
+  max-height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.findUs .map iframe {
+  max-width: 700px;
+}
+.findUs h4 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #FA9500;
+  margin: 5px 0;
+}
+.findUs h5 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #FA9500;
+}
+
+/*El footer, saque el codigo y la informacion de Talitakum egeire*/
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #FA9500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+footer .text {
+  width: 100%;
+  height: 45%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .text li {
+  list-style: none;
+  color: white;
+}
+footer .text a {
+  text-decoration: none;
+  color: white;
+}
+footer .text .b-text li {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 1.2vh 6vw;
+}
+footer .text .b-text img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 0px;
+}
+footer .socialIcons {
+  width: 100%;
+  height: 45%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer .socialIcons .b-icon {
+  text-align: center;
+}
+footer .socialIcons .b-icon li {
+  list-style: none;
+  display: inline;
+  margin: 0 15px;
+}
+footer .socialIcons img {
+  width: 30px;
+  height: 30px;
+}/*# sourceMappingURL=main.css.map */

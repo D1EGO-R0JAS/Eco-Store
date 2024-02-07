@@ -1,0 +1,103 @@
+header .header--nav {
+  min-height: 65px;
+}
+header .impact-img {
+  width: 50%;
+  max-width: 250px;
+}
+
+.healthCare h2 {
+  text-align: center;
+}
+.healthCare-article, .decorationHouse-article {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.decorationHouse h2 {
+  text-align: center;
+}
+@media (min-width: 700px) {
+  header .impact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    max-height: 520px;
+  }
+  header .impact-text {
+    width: 50%;
+    height: 60%;
+  }
+  header .impact-text h1 {
+    font-size: 2.7rem;
+  }
+  header .impact-text p {
+    font-size: 1.8rem;
+  }
+  header .impact-text button {
+    font-size: 1.6rem;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  header .impact-img {
+    width: 50%;
+    height: 60%;
+  }
+  .healthCare h2 {
+    font-size: 2.6rem;
+  }
+  .decorationHouse h2 {
+    font-size: 2.6rem;
+  }
+  .aboutUs h2 {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  .aboutUs-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .aboutUs-article .article-earth, .aboutUs-article .article-plant {
+    width: 50%;
+  }
+  .gallery h2 {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  .gallery-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .findUs h2 {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  .findUs h4 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .findUs h5 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  footer .text .b-text li {
+    font-size: 1.8rem;
+  }
+}/*# sourceMappingURL=tablet.css.map */

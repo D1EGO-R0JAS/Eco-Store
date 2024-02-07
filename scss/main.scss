@@ -1,0 +1,342 @@
+@use 'functions';
+
+$coffe:#7C6A0A;
+$green: #BABD8D;
+$salmon:#FFDAC6;
+$skeleton:#FFEFE7;
+$rod:#E86424;
+$orange:#FA9500;
+$Font:'IBM Plex Sans', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: $skeleton;
+}
+/*Seccion del header, barra de navegacion y informacion de impacto*/
+header{
+    width: 100%;
+    height: auto;
+    .header--nav{
+        width: 100%;
+        height: 10vh;
+        @include functions.flex-center(flex, row, space-between,center);
+        padding: 10px;
+        a{
+            text-decoration: none;
+            color: $coffe;            
+        }
+        h4{
+            font-family: $Font;            
+            font-size: 1.8rem;
+        }
+        ul{
+            list-style: none;
+            @include functions.flex-center(flex,row,center,center);
+            gap: 10px;
+        }
+    }
+    .impact{
+        width: 100%;
+        height: 80vh;
+        min-height: 450px;
+        padding: 15px;
+        margin-bottom: 20px;
+        @include functions.flex-center(flex,column,space-between,center);
+        &-text{
+            width: 100%;
+            height: 50%;
+            h1{
+                font-size: 2.5rem;
+                font-family: $Font;
+                color: $coffe;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 1.6rem;
+                color: $coffe;
+                font-family: $Font;
+                margin-bottom: 10px;
+            }
+            button{
+                background-color: $orange;
+                border-style: none;
+                display: inline-block;
+                width: 120px;
+                height: 30px;
+                border-radius: 10px;
+            }
+        }
+        &-img{
+            width: 65%;
+            height: 50%;
+            img{
+                width: 100%;
+                max-width: 400px;
+                height: 100%;
+                max-height: 300px;
+                border-radius: 10%;
+            }
+        }
+    }
+
+}
+/*Seccion del Cuidado de la Salud*/
+.healthCare{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    h2{
+        font-size: 2.2rem;
+        color: $coffe;
+        margin-bottom: 20px;
+        font-family: $Font;
+    }
+    &-article{
+        width: 100%;
+        height: auto;
+        @include functions.flex-center(flex,column,center,center);
+        gap: 20px;
+        .target{
+            width: 200px;
+            height: 320px;
+            border-radius: 10px;
+            background-color: $salmon;
+            padding: 10px 0;
+            @include functions.flex-center(flex,column,center,center);
+            &-icon{
+                width: 100%;
+                @include functions.flex-center(flex,row,flex-end,center);
+            }
+            figure{
+                width: 80%;
+                height: 70%;
+                margin-top: 5pxpx;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            h3{
+                font-size: 1.6rem;
+                color: $coffe;
+                margin: 10px 0;
+                font-family: $Font;
+                font-weight: 600;
+            }
+            p{
+                font-size: 1.2rem;
+                color: $coffe;
+                font-family: $Font;
+                font-weight: 400;
+                text-align: justify;
+                padding: 5px;
+            }
+
+        }
+    }
+}
+/*Secion de Decoracion del Hogar, aqui se usa el extend para heredar los diseños de las cards del cuidado de la salud*/
+.decorationHouse{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    h2{
+        font-size: 2.2rem;
+        color: $coffe;
+        margin-bottom: 20px;
+        font-family: $Font;
+
+    }
+    &-article{
+        @extend .healthCare-article;
+        .targetH{
+            @extend .target;
+            background-color: $green;
+            &-icon{
+                @extend .target-icon
+            }
+            h3{
+                color: white;
+            }
+            p{
+                color: white;
+            }
+
+        }
+    }
+}
+/*Seccion del Nosotros*/
+.aboutUs{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    margin: 20px 0 0 0;
+    h2{
+        color: $coffe;
+        font-size: 2.2rem;
+        font-family: $Font;
+    }
+    &-article{
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        @include functions.flex-center(flex,column,center,center);
+        .article-earth{
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            @include functions.flex-center(flex,row,center,center);
+            figure{
+                width: 30%;
+                max-width: 90px;
+                height: auto;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }            
+            }
+            p{
+                width: 70%;
+                height: auto;
+                font-size: 1.6rem;
+                font-family: $Font;
+                font-weight: 500;
+                color: $rod;
+                padding: 5px;
+            }
+        }
+        .article-plant{
+            @extend .article-earth;
+        }
+    }
+}
+/*La galeria de las tres fotos*/
+.gallery{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    h2{
+        color: $coffe;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        font-family: $Font;
+    }
+    &-article{
+        width: 100%;
+        margin-top: 25px;
+        height: auto;
+        @include functions.flex-center(flex,column,center,center);
+        gap:10px;
+        figure{
+            width: 70%;
+            max-width: 240px;
+            height: auto;
+            img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                }  
+        }
+    }
+
+}
+/*Seccion de ubicacion y del mapa*/
+.findUs{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 20px 0px 50px 0;
+    h2{
+        font-size: 2.2rem;
+        color: $coffe;
+        margin-bottom: 20px;
+        font-family: $Font;
+    }
+    .map{
+        width: 100%;
+        height: 50vh;
+        max-height: 500px;
+        @include functions.flex-center(flex,row,center,center);
+        margin-bottom: 20px;
+        iframe{
+            max-width: 700px;
+        }
+    }
+    h4{
+        font-family: $Font;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: $orange;
+        margin: 5px 0;        
+    }
+    h5{
+        font-family: $Font;
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: $orange;
+    }
+}
+/*El footer, saque el codigo y la informacion de Talitakum egeire*/
+footer{
+    width: 100%;
+    height: auto;
+    background-color: $orange;
+    @include functions.flex-center(flex,column,center,center);
+    padding: 15px;
+    .text{
+        width: 100%;
+        height: 45%;
+        margin-top: 10px;
+        @include functions.flex-center(flex,column,center,center);
+        li{
+            list-style: none;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .b-text{
+            li{
+                display: inline-block;
+                font-size: 1.6rem;
+                font-family: $Font;
+                margin: 1.2vh 6vw;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                margin-left: 0px;
+            }
+        }
+    }
+    .socialIcons{
+        width: 100%;
+        height: 45%;
+        margin: 20px 0;
+        @include functions.flex-center(flex,row,center,center);
+        .b-icon{
+            text-align: center;
+            li{
+                list-style: none;
+                display: inline;
+                margin: 0 15px;
+            }
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+}
